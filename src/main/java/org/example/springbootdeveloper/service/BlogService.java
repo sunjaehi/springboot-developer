@@ -20,7 +20,6 @@ public class BlogService {
     }
     public List<Article> findAll() {
         return blogRepository.findAll();
-
     }
     public Article findById(long id) {
         return blogRepository.findById(id)
@@ -36,6 +35,4 @@ public class BlogService {
         article.update(request.getTitle(), request.getContent());
         return article;
     }
-
-
 }

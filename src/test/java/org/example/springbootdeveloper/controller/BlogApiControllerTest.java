@@ -38,7 +38,8 @@ class BlogApiControllerTest {
     BlogRepository blogRepository;
     @BeforeEach //테스트를 실행하기 전에 실행하는 메소드
     public void mockMvcSetUp() {
-        this.mockMvc= MockMvcBuilders.webAppContextSetup(context).build();
+        this.mockMvc= MockMvcBuilders.webAppContextSetup(context)
+                .build();
         blogRepository.deleteAll();
     }
     @DisplayName("addArticle: 블로그 글 추가에 성공한다")

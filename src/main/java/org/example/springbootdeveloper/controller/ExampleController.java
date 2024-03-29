@@ -12,7 +12,7 @@ import java.util.List;
 @Controller
 public class ExampleController {
     @GetMapping("/thymeleaf/example")
-    public String thymeleafExample(Model model) {
+    public String thymeleafExample(Model model) { //뷰로 데이터를 넘겨주는 모델 객체
         Person examplePerson= new Person();
         examplePerson.setId(1L);
         examplePerson.setName("홍길동");
