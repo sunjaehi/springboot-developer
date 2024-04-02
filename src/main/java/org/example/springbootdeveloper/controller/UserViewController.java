@@ -9,7 +9,7 @@ public class UserViewController {
     public String login() {
         return "login";
     }
-    @GetMapping("/signup")
+    @GetMapping("/signup") //회원가입
     public String signup() {
         return "signup";
     }

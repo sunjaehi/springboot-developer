@@ -22,7 +22,7 @@ public class WebSecurityConfig {
     public WebSecurityCustomizer configure() {
         return (web) -> web.ignoring()
                 .requestMatchers(toH2Console())
-                .requestMatchers("/statid/**"); //해당 요청 타입에 대한 보안설정
+                .requestMatchers("/static/**"); //해당 요청 타입에 대한 보안설정
     }
     @Bean //특정 HTTP요청에 대한 웹 기반 보안 구성
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
@@ -45,7 +45,7 @@ public class WebSecurityConfig {
     @Bean //인증 관리자 관련 설정
     public AuthenticationManager authenticationManager(HttpSecurity http, BCryptPasswordEncoder bCryptPasswordEncoder, UserDetailService userDetailService) throws Exception {
         return http.getSharedObject(AuthenticationManagerBuilder.class)
-                .userDetailsService(userService) //사용자 정보 서비스 설정
+                .userDetailsService(userService) //사용자 정보를 가져올 서비스 설정
                 .passwordEncoder(bCryptPasswordEncoder)
                 .and()
                 .build();
