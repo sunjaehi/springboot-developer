@@ -1,4 +1,4 @@
-package org.example.springbootdeveloper.controller;
+package org.example.springbootdeveloper.controller.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.example.springbootdeveloper.domain.Article;
